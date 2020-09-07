@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
-using PDF_Extractor_API.Utils;
 
 namespace PDF_Extractor_API.Controllers
 {
@@ -15,7 +10,7 @@ namespace PDF_Extractor_API.Controllers
     [ApiController]
     public class PDFController : ControllerBase
     {
-        private IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
 
         public PDFController(IConfiguration configuration)
         {
